@@ -1,0 +1,9 @@
+@font-face {
+  font-family: roboto;
+  src: url('./roboto-regular.woff2') format('woff2');
+}
+
+#root{
+  color: orange;
+  font-family: roboto;
+}

@@ -3,15 +3,37 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
   mode: 'development',
 
-  entry: './src/index.ts',
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './public/index.html'
+    }),
+  ],
+
+  entry: './src/index.tsx',
 
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
+    symlinks: false,
+    cacheWithContext: false,
   },
 
   output: {
-    filename: '[name].bundle.js',
+    filename: '[name].[contenthash].js',
     clean: true,
+  },
+
+  optimization: {
+    moduleIds: 'deterministic',
+    runtimeChunk: 'single',
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendor',
+          chunks: 'all',
+        },
+      },
+    },
   },
 
   module: {
@@ -25,26 +47,19 @@ module.exports = {
         type: 'asset/resource',
       },
       {
-        test: /\.tsx?$/,
-        use: 'ts-loader',
+        test: /\.tsx?$/i,
+        use: 'babel-loader',
         exclude: /node_modules/,
       }
     ]
   },
 
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: './src/index.html'
-    }),
-  ],
-
   devtool: 'inline-source-map',
 
   devServer: {
-    static: './dist'
-  },
-
-  optimization: {
-    runtimeChunk: 'single',
+    static: './public',
+    historyApiFallback: {
+      index: '/index.html'
+    }
   },
 }

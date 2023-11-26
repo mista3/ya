@@ -17,15 +17,13 @@ export default function NavButton({ tab } : { tab: Tab }) {
   )
 
   const className = useMemo(() => {
-    return `nav-button ${isActive ? 'active' : ''}`
+    return `nav-button ${tab} ${isActive ? 'active' : ''}`
   }, [isActive])
   
   return (
     <button
       onClick={onClick}
       className={className}
-    >
-      {tab}
-    </button>
+    />
   )
 }

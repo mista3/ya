@@ -1,20 +1,19 @@
-import { useEffect, useState } from 'react'
-import { service } from '../service'
+import { useEffect } from 'react'
+import { fetchDonut, useDispatch, useSelector } from '../store'
+import { Data } from '../components'
 
 export default function LoaderPage() {
-  const [isLoading, setLoading] = useState(false)
+  const isLoading = useSelector(state => state.json.donutLoading)
+  const donut = useSelector(state => state.json.donut)
+  const dispatch = useDispatch()
 
   useEffect(() => {
-    (async () => {
-      setLoading(true)
-      await service.getHeavy()
-      setLoading(false)
-    })()
+    dispatch(fetchDonut())
   }, [])
   
   return <div className="page">
     <div className="loader-page">
-      {isLoading ? 'true' : 'false'}
+      <Data loading={isLoading} data={donut} />
     </div>
   </div>
 }

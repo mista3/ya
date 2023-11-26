@@ -1,18 +1,20 @@
 export const service = class {
-  static async getLight() {
+  static async getDonut() {
     const res = await fetch(
-      'http://localhost:3001/light',
+      'http://localhost:3001/donut',
       {
         method: 'GET',
       })
-    return res
+    const json = await res.json()
+    return JSON.stringify(json, undefined, 4);
   }
-  static async getHeavy() {
+  static async getEarthquakes() {
     const res = await fetch(
-      'http://localhost:3001/heavy',
+      'http://localhost:3001/earthquakes',
       {
         method: 'GET',
       })
-    return res
+    const json = await res.json()
+    return JSON.stringify(json, undefined, 4);
   }
 }

@@ -1,11 +1,13 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const path = require('path')
 
 module.exports = {
   mode: 'development',
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: './public/index.html'
+      template: './public/index.html',
+      publicPath: 'auto',
     }),
   ],
 
@@ -15,6 +17,9 @@ module.exports = {
     extensions: ['.tsx', '.ts', '.js'],
     symlinks: false,
     cacheWithContext: false,
+    alias: {
+      'store': path.resolve(__dirname, '../src/store')
+    }
   },
 
   output: {
@@ -43,7 +48,11 @@ module.exports = {
         use: ['style-loader', 'css-loader'],
       },
       {
-        test: /\.woff2$/i,
+        test: /\.ttf$/i,
+        type: 'asset/resource',
+      },
+      {
+        test: /\.(svg|png|gif)$/i,
         type: 'asset/resource',
       },
       {
@@ -60,6 +69,6 @@ module.exports = {
     static: './public',
     historyApiFallback: {
       index: '/index.html'
-    }
+    },
   },
 }

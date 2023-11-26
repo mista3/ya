@@ -1,0 +1,381 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "generated": 1700954780000,
+    "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson",
+    "title": "USGS All Earthquakes, Past Hour",
+    "status": 200,
+    "api": "1.10.3",
+    "count": 9
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 1.11,
+        "place": "4 km W of Cobb, CA",
+        "time": 1700953975490,
+        "updated": 1700954710637,
+        "tz": null,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73967406",
+        "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/nc73967406.geojson",
+        "felt": 1,
+        "cdi": 0,
+        "mmi": null,
+        "alert": null,
+        "status": "automatic",
+        "tsunami": 0,
+        "sig": 19,
+        "net": "nc",
+        "code": "73967406",
+        "ids": ",nc73967406,",
+        "sources": ",nc,",
+        "types": ",dyfi,nearby-cities,origin,phase-data,scitech-link,",
+        "nst": 21,
+        "dmin": 0.01209,
+        "rms": 0.06,
+        "gap": 116,
+        "magType": "md",
+        "type": "earthquake",
+        "title": "M 1.1 - 4 km W of Cobb, CA"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.7638321,
+          38.8193321,
+          1.68
+        ]
+      },
+      "id": "nc73967406"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 1.15,
+        "place": "4 km W of Cobb, CA",
+        "time": 1700953961680,
+        "updated": 1700954531623,
+        "tz": null,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73967401",
+        "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/nc73967401.geojson",
+        "felt": null,
+        "cdi": null,
+        "mmi": null,
+        "alert": null,
+        "status": "automatic",
+        "tsunami": 0,
+        "sig": 20,
+        "net": "nc",
+        "code": "73967401",
+        "ids": ",nc73967401,",
+        "sources": ",nc,",
+        "types": ",nearby-cities,origin,phase-data,scitech-link,",
+        "nst": 18,
+        "dmin": 0.01008,
+        "rms": 0.02,
+        "gap": 120,
+        "magType": "md",
+        "type": "earthquake",
+        "title": "M 1.2 - 4 km W of Cobb, CA"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.7639999,
+          38.8214989,
+          2.01
+        ]
+      },
+      "id": "nc73967401"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 1.78,
+        "place": "3 km NNE of Loma Linda, CA",
+        "time": 1700953877570,
+        "updated": 1700954560700,
+        "tz": null,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci39717954",
+        "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/ci39717954.geojson",
+        "felt": null,
+        "cdi": null,
+        "mmi": null,
+        "alert": null,
+        "status": "automatic",
+        "tsunami": 0,
+        "sig": 49,
+        "net": "ci",
+        "code": "39717954",
+        "ids": ",ci39717954,",
+        "sources": ",ci,",
+        "types": ",focal-mechanism,nearby-cities,origin,phase-data,scitech-link,",
+        "nst": 84,
+        "dmin": 0.04449,
+        "rms": 0.16,
+        "gap": 31,
+        "magType": "ml",
+        "type": "earthquake",
+        "title": "M 1.8 - 3 km NNE of Loma Linda, CA"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -117.244,
+          34.0746667,
+          13.08
+        ]
+      },
+      "id": "ci39717954"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 1.6,
+        "place": "Central Alaska",
+        "time": 1700953675467,
+        "updated": 1700953834894,
+        "tz": null,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ak023f4hjroa",
+        "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/ak023f4hjroa.geojson",
+        "felt": null,
+        "cdi": null,
+        "mmi": null,
+        "alert": null,
+        "status": "automatic",
+        "tsunami": 0,
+        "sig": 39,
+        "net": "ak",
+        "code": "023f4hjroa",
+        "ids": ",ak023f4hjroa,",
+        "sources": ",ak,",
+        "types": ",origin,phase-data,",
+        "nst": null,
+        "dmin": null,
+        "rms": 0.69,
+        "gap": null,
+        "magType": "ml",
+        "type": "earthquake",
+        "title": "M 1.6 - Central Alaska"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -149.6409,
+          63.3734,
+          67.9
+        ]
+      },
+      "id": "ak023f4hjroa"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 1.7,
+        "place": "western Texas",
+        "time": 1700952490858,
+        "updated": 1700953474356,
+        "tz": null,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2023xdad",
+        "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/tx2023xdad.geojson",
+        "felt": null,
+        "cdi": null,
+        "mmi": null,
+        "alert": null,
+        "status": "automatic",
+        "tsunami": 0,
+        "sig": 44,
+        "net": "tx",
+        "code": "2023xdad",
+        "ids": ",tx2023xdad,",
+        "sources": ",tx,",
+        "types": ",origin,phase-data,",
+        "nst": 18,
+        "dmin": 0,
+        "rms": 0.2,
+        "gap": 88,
+        "magType": "ml(texnet)",
+        "type": "earthquake",
+        "title": "M 1.7 - western Texas"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -104.302,
+          31.651,
+          5.0129
+        ]
+      },
+      "id": "tx2023xdad"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 1.96000004,
+        "place": "5 km NE of Pāhala, Hawaii",
+        "time": 1700952460450,
+        "updated": 1700952646710,
+        "tz": null,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv73663027",
+        "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/hv73663027.geojson",
+        "felt": null,
+        "cdi": null,
+        "mmi": null,
+        "alert": null,
+        "status": "automatic",
+        "tsunami": 0,
+        "sig": 59,
+        "net": "hv",
+        "code": "73663027",
+        "ids": ",hv73663027,",
+        "sources": ",hv,",
+        "types": ",origin,phase-data,",
+        "nst": 29,
+        "dmin": null,
+        "rms": 0.109999999,
+        "gap": 111,
+        "magType": "md",
+        "type": "earthquake",
+        "title": "M 2.0 - 5 km NE of Pāhala, Hawaii"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -155.444671630859,
+          19.2446670532227,
+          27.9899997711182
+        ]
+      },
+      "id": "hv73663027"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 1.2,
+        "place": "68 km W of Petersville, Alaska",
+        "time": 1700952360377,
+        "updated": 1700952507286,
+        "tz": null,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ak023f4h6kqt",
+        "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/ak023f4h6kqt.geojson",
+        "felt": null,
+        "cdi": null,
+        "mmi": null,
+        "alert": null,
+        "status": "automatic",
+        "tsunami": 0,
+        "sig": 22,
+        "net": "ak",
+        "code": "023f4h6kqt",
+        "ids": ",ak023f4h6kqt,",
+        "sources": ",ak,",
+        "types": ",origin,phase-data,",
+        "nst": null,
+        "dmin": null,
+        "rms": 0.93,
+        "gap": null,
+        "magType": "ml",
+        "type": "earthquake",
+        "title": "M 1.2 - 68 km W of Petersville, Alaska"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -152.0917,
+          62.5805,
+          19.9
+        ]
+      },
+      "id": "ak023f4h6kqt"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 2.33,
+        "place": "4 km ESE of Maria Antonia, Puerto Rico",
+        "time": 1700952132960,
+        "updated": 1700954021870,
+        "tz": null,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr71432208",
+        "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/pr71432208.geojson",
+        "felt": null,
+        "cdi": null,
+        "mmi": null,
+        "alert": null,
+        "status": "reviewed",
+        "tsunami": 0,
+        "sig": 84,
+        "net": "pr",
+        "code": "71432208",
+        "ids": ",pr71432208,",
+        "sources": ",pr,",
+        "types": ",origin,phase-data,",
+        "nst": 9,
+        "dmin": 0.03159,
+        "rms": 0.08,
+        "gap": 203,
+        "magType": "md",
+        "type": "earthquake",
+        "title": "M 2.3 - 4 km ESE of Maria Antonia, Puerto Rico"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.8495,
+          17.961,
+          17.67
+        ]
+      },
+      "id": "pr71432208"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 1.55,
+        "place": "12 km E of Ocotillo Wells, CA",
+        "time": 1700951251310,
+        "updated": 1700951907250,
+        "tz": null,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci39717938",
+        "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/ci39717938.geojson",
+        "felt": null,
+        "cdi": null,
+        "mmi": null,
+        "alert": null,
+        "status": "automatic",
+        "tsunami": 0,
+        "sig": 37,
+        "net": "ci",
+        "code": "39717938",
+        "ids": ",ci39717938,",
+        "sources": ",ci,",
+        "types": ",focal-mechanism,nearby-cities,origin,phase-data,scitech-link,",
+        "nst": 48,
+        "dmin": 0.02647,
+        "rms": 0.27,
+        "gap": 45,
+        "magType": "ml",
+        "type": "earthquake",
+        "title": "M 1.6 - 12 km E of Ocotillo Wells, CA"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -115.9985,
+          33.1535,
+          7.11
+        ]
+      },
+      "id": "ci39717938"
+    }
+  ],
+  "bbox": [
+    -155.44467163086,
+    17.961,
+    1.68,
+    -66.8495,
+    63.3734,
+    67.9
+  ]
+}

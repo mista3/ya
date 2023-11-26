@@ -1,22 +1,23 @@
-import { useState } from 'react'
+import { decrement, increment, useDispatch, useSelector } from '../store'
 
 export default function CounterPage() {
-  const [count, setCount] = useState(0)
+  const count = useSelector(state => state.count.count)
+  const dispatch = useDispatch()
 
-  const increment = () => {
-    setCount(count + 1)
+  const add = () => {
+    dispatch(increment())
   }
-
-  const dencrement = () => {
-    setCount(count + 1)
+  
+  const subtract = () => {
+    dispatch(decrement())
   }
   
   return <div className="page">
     <div className="counter-page">
       <div className="count">{count}</div>
       <div className="count-buttons">
-        <button onClick={dencrement}>-</button>
-        <button onClick={increment}>+</button>
+        <button onClick={subtract}/>
+        <button onClick={add}/>
       </div>
     </div>
   </div>

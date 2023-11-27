@@ -1,6 +1,7 @@
-import { fetchDonut, fetchEarthquakes, useDispatch, useSelector } from 'store'
-import { Data } from 'components'
 import { useEffect, useState } from 'react'
+import { clearData, fetchDonut, fetchEarthquakes, useDispatch, useSelector } from 'store'
+import { Data } from 'components'
+import './ParallelPage.css'
 
 export default function ParallelPage() {
   const isDonutLoading = useSelector(state => state.json.donutLoading)
@@ -12,12 +13,16 @@ export default function ParallelPage() {
   const [abort, setAbort] = useState(() => () => {})
 
   const fetch = () => {
-    const promise1 = dispatch(fetchDonut())
-    const promise2 = dispatch(fetchEarthquakes())
-
-    setAbort(() => () => {
-      promise1.abort()
-      promise2.abort()
+    abort()
+    dispatch(clearData())
+    setTimeout(() => {
+      const promise1 = dispatch(fetchDonut())
+      const promise2 = dispatch(fetchEarthquakes())
+      
+      setAbort(() => () => {
+        promise1.abort()
+        promise2.abort()
+      })
     })
   }
 

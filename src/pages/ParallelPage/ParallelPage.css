@@ -1,0 +1,25 @@
+.parallel-page{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.parallel-page .data-blocks{
+  display: flex;
+  gap: 32px;
+}
+
+.parallel-page button{
+  background-image: url('public/img/fetch.png');
+  width: 147px;
+  height: 87px;
+}
+
+.parallel-page button:active{
+  background-image: url('public/img/fetch-pressed.png');
+}
+
+.parallel-page button:focus{
+  filter: sepia(20%) hue-rotate(180deg) saturate(500%);
+}

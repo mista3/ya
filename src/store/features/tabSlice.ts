@@ -1,5 +1,5 @@
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit'
-import { Tab } from '../../types'
+import { Tab } from 'types'
 
 type InitialState = {
   tab: Tab,

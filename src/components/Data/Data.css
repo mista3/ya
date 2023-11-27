@@ -1,0 +1,29 @@
+.data{
+  width: 400px;
+  background-image: url('public/img/frame.png');
+  padding: 20px;
+  color: green;
+  overflow: auto;
+  white-space: pre;
+  font-size: 12px;
+  image-rendering: pixelated;
+}
+
+.data div{
+  height: 360px;
+  overflow-x: auto;
+}
+
+.data div::-webkit-scrollbar{
+  width: 2px;
+  height: 2px;
+}
+.data div::-webkit-scrollbar-track{
+  background-color: transparent;
+}
+.data div::-webkit-scrollbar-thumb{
+  background-color: green;
+}
+.data div::-webkit-scrollbar-corner{
+  background-color: transparent;
+}

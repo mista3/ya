@@ -1,0 +1,43 @@
+.counter-page .count{
+  height: 200px;
+  width: 200px;
+  background-image: url('public/img/small-frame.png');
+  display: grid;
+  place-items: center;
+  color: green;
+  font-size: 60px;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.counter-page .count-buttons{
+  display: flex;
+  justify-content: space-between;
+  margin: 20px -14px 0 0;
+}
+
+.counter-page .count-buttons button{
+  width: 80px;
+  height: 92.8px;
+}
+
+.counter-page button:first-child{
+  background-image: url('public/img/minus.png');
+  filter: sepia(100%) hue-rotate(320deg) saturate(600%);
+}
+.counter-page button:first-child:focus{
+  filter: sepia(50%) hue-rotate(320deg) saturate(600%);
+}
+.counter-page button:first-child:active{
+  background-image: url('public/img/minus-pressed.png');
+}
+.counter-page button:last-child{
+  background-image: url('public/img/plus.png');
+  filter: sepia(100%) hue-rotate(45deg) saturate(500%);
+}
+.counter-page button:last-child:focus{
+  filter: sepia(50%) hue-rotate(45deg) saturate(500%);
+}
+.counter-page button:last-child:active{
+  background-image: url('public/img/plus-pressed.png');
+}

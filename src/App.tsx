@@ -13,7 +13,7 @@ import {
   FetchPressedPng,
 } from 'public/img'
 
-import './style.css'
+import './index.css'
 
 export default function App() {
   const tab = useSelector(state => state.tab.tab)

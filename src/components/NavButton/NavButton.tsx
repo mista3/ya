@@ -1,6 +1,7 @@
 import { useCallback, useMemo } from 'react';
 import { clearData, navigate, useDispatch, useSelector } from 'store';
 import { Tab } from 'types';
+import './NavButton.css'
 
 export default function NavButton({ tab } : { tab: Tab }) {
   const currentTab = useSelector(state => state.tab.tab)

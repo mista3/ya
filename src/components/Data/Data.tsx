@@ -1,5 +1,5 @@
 import { LoadingGif } from 'public/img'
-import { useEffect } from 'react'
+import './Data.css'
 
 export default function Data({loading, data}: {loading: boolean, data: string}) {
   

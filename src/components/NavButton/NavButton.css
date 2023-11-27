@@ -1,0 +1,42 @@
+.nav-button{
+  height: 87px;
+  background-color: transparent;
+  border: none;
+  background-size: cover;
+  image-rendering: pixelated;
+}
+
+.nav-button:focus{
+  filter: sepia(20%) hue-rotate(180deg) saturate(500%);
+}
+
+.nav-button.active{
+  filter: sepia(100%) hue-rotate(180deg) saturate(500%);
+}
+
+.nav-button.counter{
+  width: 189px;
+  background-image: url('public/img/counter.png');
+}
+
+.nav-button.counter:active{
+  background-image: url('public/img/counter-pressed.png');
+}
+
+.nav-button.loader{
+  width: 171px;
+  background-image: url('public/img/loader.png');
+}
+
+.nav-button.loader:active{
+  background-image: url('public/img/loader-pressed.png');
+}
+
+.nav-button.parallel{
+  width: 213px;
+  background-image: url('public/img/parallel.png');
+}
+
+.nav-button.parallel:active{
+  background-image: url('public/img/parallel-pressed.png');
+}

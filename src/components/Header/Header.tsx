@@ -1,4 +1,5 @@
-import NavButton from './NavButton';
+import NavButton from '../NavButton/NavButton';
+import './Header.css'
 
 export default function Header() {
   

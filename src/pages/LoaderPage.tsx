@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
-import { fetchDonut, useDispatch, useSelector } from '../store'
-import { Data } from '../components'
+import { fetchDonut, useDispatch, useSelector } from 'store'
+import { Data } from 'components'
 
 export default function LoaderPage() {
   const isLoading = useSelector(state => state.json.donutLoading)

@@ -18,7 +18,13 @@ module.exports = {
     symlinks: false,
     cacheWithContext: false,
     alias: {
-      'store': path.resolve(__dirname, '../src/store')
+      'store': path.resolve(__dirname, 'src/store'),
+      'components': path.resolve(__dirname, 'src/components'),
+      'pages': path.resolve(__dirname, 'src/pages'),
+      'types': path.resolve(__dirname, 'src/types'),
+      'service': path.resolve(__dirname, 'src/service'),
+      'public': path.resolve(__dirname, 'src/../public'),
+      'helpers': path.resolve(__dirname, 'src/helpers'),
     }
   },
 
@@ -52,7 +58,7 @@ module.exports = {
         type: 'asset/resource',
       },
       {
-        test: /\.(svg|png|gif)$/i,
+        test: /\.(png|gif)$/i,
         type: 'asset/resource',
       },
       {

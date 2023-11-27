@@ -9,5 +9,10 @@
     "skipLibCheck": true,
     "moduleResolution": "node",
     "baseUrl": "./src",
+    "paths": {
+      "public/*": [
+        "../public/*"
+      ]
+    }
   },
 }

@@ -1,4 +1,4 @@
-import { decrement, increment, useDispatch, useSelector } from '../store'
+import { decrement, increment, useDispatch, useSelector } from 'store'
 
 export default function CounterPage() {
   const count = useSelector(state => state.count.count)

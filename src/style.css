@@ -1,6 +1,6 @@
 @font-face{
   font-family: visitor;
-  src: url('../public/pixel.otf') format('opentype');
+  src: url('public/pixel.otf') format('opentype');
 }
 
 *{
@@ -20,12 +20,11 @@
 .header{
   display: flex;
   justify-content: space-evenly;
-  padding: 20px 10px;
+  padding: 20px 0px 20px 30px;
   gap: 4px;
 }
 
 .nav-button{
-  width: 213px;
   height: 87px;
   background-color: transparent;
   border: none;
@@ -33,9 +32,12 @@
   image-rendering: pixelated;
 }
 
+button:focus{
+  outline: none;
+}
+
 .nav-button:focus{
   filter: sepia(20%) hue-rotate(180deg) saturate(500%);
-  outline: none;
 }
 
 .nav-button.active{
@@ -43,27 +45,30 @@
 }
 
 .nav-button.counter{
-  background-image: url('../public/img/counter.png');
+  width: 189px;
+  background-image: url('public/img/counter.png');
 }
 
 .nav-button.counter:active{
-  background-image: url('../public/img/counter-pressed.png');
+  background-image: url('public/img/counter-pressed.png');
 }
 
 .nav-button.loader{
-  background-image: url('../public/img/loader.png');
+  width: 171px;
+  background-image: url('public/img/loader.png');
 }
 
 .nav-button.loader:active{
-  background-image: url('../public/img/loader-pressed.png');
+  background-image: url('public/img/loader-pressed.png');
 }
 
 .nav-button.parallel{
-  background-image: url('../public/img/parallel.png');
+  width: 213px;
+  background-image: url('public/img/parallel.png');
 }
 
 .nav-button.parallel:active{
-  background-image: url('../public/img/parallel-pressed.png');
+  background-image: url('public/img/parallel-pressed.png');
 }
 
 .page{
@@ -74,7 +79,7 @@
 
 .data{
   width: 400px;
-  background-image: url('../public/img/frame.png');
+  background-image: url('public/img/frame.png');
   padding: 20px;
   color: green;
   overflow: auto;
@@ -89,8 +94,8 @@
 }
 
 .data div::-webkit-scrollbar{
-  width: 4px;
-  height: 4px;
+  width: 2px;
+  height: 2px;
 }
 .data div::-webkit-scrollbar-track{
   background-color: transparent;
@@ -105,7 +110,7 @@
 .count{
   height: 200px;
   width: 200px;
-  background-image: url('../public/img/small-frame.png');
+  background-image: url('public/img/small-frame.png');
   display: grid;
   place-items: center;
   color: green;
@@ -130,21 +135,42 @@
 }
 
 .counter-page button:first-child{
-  background-image: url('../public/img/minus.png');
+  background-image: url('public/img/minus.png');
   filter: sepia(100%) hue-rotate(320deg) saturate(600%);
 }
 .counter-page button:first-child:active{
-  background-image: url('../public/img/minus-pressed.png');
+  background-image: url('public/img/minus-pressed.png');
 }
 .counter-page button:last-child{
-  background-image: url('../public/img/plus.png');
+  background-image: url('public/img/plus.png');
   filter: sepia(100%) hue-rotate(45deg) saturate(500%);
 }
 .counter-page button:last-child:active{
-  background-image: url('../public/img/plus-pressed.png');
+  background-image: url('public/img/plus-pressed.png');
 }
 
 .parallel-page{
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.parallel-page .data-blocks{
+  display: flex;
   gap: 32px;
+}
+
+.parallel-page button{
+  background-image: url('public/img/fetch.png');
+  width: 147px;
+  height: 87px;
+  background-color: transparent;
+  border: none;
+  background-size: cover;
+  image-rendering: pixelated;
+}
+
+.parallel-page button:active{
+  background-image: url('public/img/fetch-pressed.png');
 }

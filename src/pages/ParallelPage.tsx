@@ -1,7 +1,5 @@
-import { useEffect, useState } from 'react'
-import { service } from '../service'
-import { fetchDonut, fetchEarthquakes, useDispatch, useSelector } from '../store'
-import { Data } from '../components'
+import { fetchDonut, fetchEarthquakes, useDispatch, useSelector } from 'store'
+import { Data } from 'components'
 
 export default function ParallelPage() {
   const isDonutLoading = useSelector(state => state.json.donutLoading)
@@ -10,15 +8,18 @@ export default function ParallelPage() {
   const earthquakes = useSelector(state => state.json.earthquakes)
   const dispatch = useDispatch()
 
-  useEffect(() => {
+  const fetch = () => {
     dispatch(fetchDonut())
     dispatch(fetchEarthquakes())
-  }, [])
+  }
   
   return <div className="page">
     <div className="parallel-page">
-      <Data loading={isDonutLoading} data={donut} />
-      <Data loading={isEarthquakesLoading} data={earthquakes} />
+      <div className='data-blocks'>
+        <Data loading={isDonutLoading} data={donut} />
+        <Data loading={isEarthquakesLoading} data={earthquakes} />
+      </div>
+      <button onClick={fetch} />
     </div>
   </div>
 }

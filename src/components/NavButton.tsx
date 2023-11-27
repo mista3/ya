@@ -1,6 +1,6 @@
 import { useCallback, useMemo } from 'react';
-import { navigate, useDispatch, useSelector } from '../store';
-import { Tab } from '../types';
+import { navigate, useDispatch, useSelector } from 'store';
+import { Tab } from 'types';
 
 export default function NavButton({ tab } : { tab: Tab }) {
   const currentTab = useSelector(state => state.tab.tab)

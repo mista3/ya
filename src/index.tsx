@@ -7,8 +7,6 @@ import App from './App'
 const root = createRoot(document.getElementById('app')!)
 root.render(
   <Provider store={store}>
-    <StrictMode>
       <App />
-    </StrictMode>
   </Provider>
 )

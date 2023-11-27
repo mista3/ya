@@ -6,7 +6,7 @@ type InitialState = {
 }
 
 const initialState: InitialState = {
-  tab: 'counter'
+  tab: 'counter',
 }
 
 export const tabSlice = createSlice({
@@ -15,7 +15,7 @@ export const tabSlice = createSlice({
   reducers: {
     navigate: (state, action: PayloadAction<Tab>) => {
       state.tab = action.payload
-    }
+    },
   }
 })
 

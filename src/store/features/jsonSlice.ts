@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import { service } from '../../service';
+import { service } from 'service';
 
 type InitialState = {
   donutLoading: boolean,
@@ -34,7 +34,12 @@ export const fetchEarthquakes = createAsyncThunk(
 export const dataSlice = createSlice({
   name: 'json',
   initialState,
-  reducers: {},
+  reducers: {
+    clearData: (state) => {
+      state.donut = ''
+      state.earthquakes = ''
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchDonut.pending, (state) => {
@@ -44,6 +49,9 @@ export const dataSlice = createSlice({
         state.donut = action.payload
         state.donutLoading = false
       })
+      .addCase(fetchDonut.rejected, (state) => {
+        state.donutLoading = false
+      })
       .addCase(fetchEarthquakes.pending, (state) => {
         state.earthquakesLoading = true
       })
@@ -51,8 +59,11 @@ export const dataSlice = createSlice({
         state.earthquakes = action.payload
         state.earthquakesLoading = false
       })
+      .addCase(fetchEarthquakes.rejected, (state) => {
+        state.earthquakesLoading = false
+      })
   },
 })
 
-export const { } = dataSlice.actions
+export const { clearData } = dataSlice.actions
 export default dataSlice.reducer

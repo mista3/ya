@@ -1,7 +1,9 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const path = require('path')
+import HtmlWebpackPlugin from 'html-webpack-plugin'
+import path from 'path'
+import webpack from 'webpack'
+import 'webpack-dev-server'
 
-module.exports = {
+const config: webpack.Configuration = {
   mode: 'development',
 
   plugins: [
@@ -78,3 +80,5 @@ module.exports = {
     },
   },
 }
+
+export default config

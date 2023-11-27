@@ -1,5 +1,6 @@
 import { fetchDonut, fetchEarthquakes, useDispatch, useSelector } from 'store'
 import { Data } from 'components'
+import { useEffect, useState } from 'react'
 
 export default function ParallelPage() {
   const isDonutLoading = useSelector(state => state.json.donutLoading)
@@ -8,10 +9,23 @@ export default function ParallelPage() {
   const earthquakes = useSelector(state => state.json.earthquakes)
   const dispatch = useDispatch()
 
+  const [abort, setAbort] = useState(() => () => {})
+
   const fetch = () => {
-    dispatch(fetchDonut())
-    dispatch(fetchEarthquakes())
+    const promise1 = dispatch(fetchDonut())
+    const promise2 = dispatch(fetchEarthquakes())
+
+    setAbort(() => () => {
+      promise1.abort()
+      promise2.abort()
+    })
   }
+
+  useEffect(() => {
+    return () => {
+      abort()
+    }
+  }, [abort])
   
   return <div className="page">
     <div className="parallel-page">

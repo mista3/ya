@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { fetchDonut, useDispatch, useSelector } from 'store'
 import { Data } from 'components'
 
@@ -7,9 +7,23 @@ export default function LoaderPage() {
   const donut = useSelector(state => state.json.donut)
   const dispatch = useDispatch()
 
+  const [abort, setAbort] = useState(() => () => {})
+
   useEffect(() => {
-    dispatch(fetchDonut())
+    setTimeout(() => {
+      const promise = dispatch(fetchDonut())
+      
+      setAbort(() => () => {
+        promise.abort()
+      })
+    })
   }, [])
+
+    useEffect(() => {
+    return () => {
+      abort()
+    }
+  }, [abort])
   
   return <div className="page">
     <div className="loader-page">

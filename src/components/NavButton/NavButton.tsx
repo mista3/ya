@@ -16,6 +16,7 @@ export default function NavButton({ tab } : { tab: Tab }) {
     () => {
       if (isActive) return;
       dispatch(navigate(tab))
+      window.history.pushState('', '', tab)
       dispatch(clearData())
     },
     [tab, isActive]

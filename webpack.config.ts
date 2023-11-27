@@ -76,7 +76,7 @@ const config: webpack.Configuration = {
   devServer: {
     static: './public',
     historyApiFallback: {
-      index: '/index.html'
+      index: '/'
     },
   },
 }

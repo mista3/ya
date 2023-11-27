@@ -1,7 +1,7 @@
 import { useEffect, useMemo } from 'react'
-import { useSelector } from 'store'
+import { navigate, useDispatch, useSelector } from 'store'
 import {Header} from 'components'
-import { preloadImages } from 'helpers'
+import { preloadImages, tabs } from 'helpers'
 import { routes } from './router'
 
 import {
@@ -14,9 +14,11 @@ import {
 } from 'public/img'
 
 import './index.css'
+import { Tab } from 'types'
 
 export default function App() {
   const tab = useSelector(state => state.tab.tab)
+  const dispatch = useDispatch();
 
   const currentPage = useMemo(() => {
     return routes[tab]
@@ -31,6 +33,20 @@ export default function App() {
       PlusPressedPng,
       FetchPressedPng,
     ])
+
+    const manageUrl = () => {
+      const currentTab = window.location.pathname.replace('/', '') as Tab;
+
+      if (tabs.includes(currentTab)) {
+        dispatch(navigate(currentTab))
+      } else {
+        dispatch(navigate('counter'))
+        window.history.replaceState('', '', 'counter')
+      }
+    }
+    
+    manageUrl()
+    addEventListener('popstate', manageUrl)
   }, [])
   
   return (
